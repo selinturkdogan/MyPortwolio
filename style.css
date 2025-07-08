@@ -1,0 +1,404 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to right, #f8efc9, #f6ebab);
+    min-height: 100vh;
+    padding-top: 10vh;
+}
+
+nav {
+     position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px; /* Yüksekliği sabit tut */
+    background: linear-gradient(to right, #f8efc9, #f6ebab);
+    
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.nav-container {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #cd4075;
+}
+
+.links {
+    display: flex;
+    gap: 2rem;
+}
+
+.links a {
+    text-decoration: none;
+    color: #ee6d6d;
+    font-weight: 500;
+    position: relative;
+    transition: 0.3s;
+}
+
+.links a:hover {
+    color: #cd4075;
+}
+
+.links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #cd4075;
+    transition: 0.3s;
+}
+
+.links a:hover::after {
+    width: 100%;
+}
+
+.contact-btn {
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    border: 2px solid #f2ad83;
+    color: #cd4075;
+    transition: 0.3s;
+}
+
+.contact-btn:hover {
+    background-color: #f2ad83;
+    color: white;
+}
+
+.main-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 90vh;
+    padding: 0 5%;
+}
+
+.image {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    padding: 10px;
+    background: linear-gradient(to right, #f8efc9, #f6ebab);
+    display: flex;
+    object-fit: cover;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.image img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    transform: scale(1.5) translateY(-30px) translateX(50px);
+    box-shadow: 0 10px 30px rgba(205, 64, 117, 0.2);
+}
+
+.content {
+    width: 50%;
+}
+
+.content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #cd4075;
+}
+
+.content h1 span {
+    color: #ee6d6d;
+}
+
+
+.content p {
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    color: #5a5a5a;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #ee6d6d;
+    color: #ee6d6d;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    background-color: #ee6d6d;
+    color: white;
+    transform: translateY(-5px);
+}
+
+button {
+    padding: 0.8rem 2rem;
+    background-color: #cd4075;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #ee6d6d;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(238, 109, 109, 0.4);
+}
+
+/* About genel */
+#about {
+    padding: 5% 10%;
+    background: linear-gradient(to right, #f8efc9, #f6ebab);
+}
+
+.about-container {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+/* sol taraf fotoğraf için */
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.about-image img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    transform: translateY(10px);
+    border-radius: 50%;
+    box-shadow: 0 10px 30px rgba(205, 64, 117, 0.2);
+}
+
+/* sağ taraf metin için*/
+.about-text {
+    flex: 2;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 1;
+}
+
+.about-text h2 {
+    color: #cd4075;
+    margin-bottom: 1rem;
+    font-size: 3rem;
+}
+
+.about-text h2 span {
+    color: #ee6d6d;
+}
+
+.about-text p {
+    color: #5a5a5a;
+    margin-bottom: 2rem;
+    line-height: 1.8;
+    font-size: 1.2rem;
+    
+}
+
+.about-text .greating{
+    color: #5a5a5a;
+    margin-bottom: 0.5rem;
+    line-height: 1.8;
+    font-size: 2rem;
+
+/*paragraflar için scroll efekti */
+}.fade-in-text {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in-text.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Container ve başlık */
+.skills-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.sub-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: #cd4075;
+}
+
+.sub-title span {
+  color: #ee6d6d;
+}
+
+.technical-skills{
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: #cd4075;
+}
+
+/* Technical bars container */
+.technical-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* Her bir skill bar */
+.bar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* İkon stili */
+.bar i {
+  font-size: 3rem;
+  color: #cd4075;
+  min-width: 50px;
+}
+
+/* Skill ismi */
+.info span {
+  font-size: 1.25rem;
+  font-weight: 600;
+  width: 100px;
+  color: #5a5a5a;
+}
+
+/* Progress bar dış kutu */
+.progress-line {
+  flex-grow: 1;
+  background-color: #f2ad83;
+  height: 12px;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Progress bar dolgu */
+.progress-line span {
+  display: block;
+  height: 100%;
+  width: 0;
+  background-color: #cd4075;
+  border-radius: 8px;
+  transition: width 1.5s ease-in-out;
+}
+
+/* Language Section Genel Yapı */
+#languages {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+#languages h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: #cd4075;
+}
+
+/* Kartlar için */
+.language-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* Her bir dil kartı */
+.language-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Bayrak simgesi */
+.language-card .flag {
+  font-size: 2rem;
+  min-width: 50px;
+}
+
+/* Dil ismi */
+.language-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #5a5a5a;
+  width: 100px;
+  margin: 0;
+}
+
+/* Progress bar dışı */
+.language-card .progress-bar {
+  flex-grow: 1;
+  background-color: #f2ad83;
+  height: 12px;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Progress bar iç dolgu */
+.language-card .progress-fill {
+  height: 100%;
+  background-color: #cd4075;
+  color: #fff;
+  font-size: 0.85rem;
+  text-align: center;
+  line-height: 12px;
+  white-space: nowrap;
+  transition: width 1.5s ease-in-out;
+  border-radius: 8px;
+  width: 0; /* Başlangıçta 0, JS ile doldur */
+}
+
+.fi {
+  width: 40px;
+  height: 30px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  opacity: 0.7;
+}
+

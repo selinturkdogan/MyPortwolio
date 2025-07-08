@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selin Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> <!--ikonlar için-->
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> <!--ek ikonlar(technicals skillsteki ikonlar) için-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/7.5.0/css/flag-icons.min.css"> <!--bayrak ikonları için-->
+
+</head>
+<body>
+<!-- Navbar -->
+    <nav> 
+        <div class="nav-container">
+            <div class="logo">
+                <span>Selin Türkdoğan</span>
+            </div>
+            <div class="links">
+                <a href="index.html">Home</a> 
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#">Certificates</a>
+                <a href="#">Portfolio</a>
+                <a href="#" class="contact-btn">Contact Me!</a>
+            </div>
+        </div>
+    </nav>
+<!-- Ana giriş -->
+    <section>
+        <div class="main-container">
+            <div class="image">
+                <img src=" " alt=" ">
+            </div>
+            <div class="content">
+                <h1>Hey I'm <span>Selin</span></h1>
+                <p>Hello! I'm Selin, a software engineering student. I'm passionate about coding and problem-solving. Throughout my university education, I've had the opportunity to work with various technologies through both individual and team-based projects. I am open to learning new technologies, solution-oriented, and constantly aiming to improve myself.</p>
+                <!-- sosyal medya ikonları -->
+                <div class="social-links">
+                    <a href="#" id="githubLink"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" id="linkedinLink"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <a href="selin-cv.pdf" download class="cv-btn"> <!--CV indirmek için download kullandım.-->
+                <button>Download CV</button>
+                </a>
+            </div>
+        </div>
+    </section>
+<!-- About -->
+    <section id="about">
+        <div class="about-container">
+    
+            <!-- Soldaki fotoğraf -->
+            <div class="about-image">
+                <img src=" " alt=" ">
+            </div>
+
+            <!-- Sağdaki metin -->
+            <div class="about-text" id="about-text">
+                <h2>Get to Know <span>Me!</span></h2>
+                <p class="greating">Hello! </p>
+
+                <p class="fade-in-text">I’m Selin Türkdoğan, a 22 year old final-year Software Engineering student at International Final University, where instruction is conducted in English. Born on January 3, 2003, in İzmir’s Konak district, I completed my secondary education at Bergama Akif Ersezgin Anatolian High School and have always prioritized both academic and personal growth.</p>
+            
+                <p class="fade-in-text"> As president of my university’s Happy Paws Club for four years and an active member of multiple campus communities, I’ve honed leadership, teamwork, and communication skills.</p>
+            
+                <p class="fade-in-text">Sports are central to my life: I’ve practiced Taekwondo professionally for 16 years and engaged extensively in orienteering. These disciplines have instilled values like resilience, strategic thinking, and discipline—qualities that help me balance academics, sports, and social life while sustaining motivation.</p>
+
+                <p class="fade-in-text">Passionate about software development, I’m proficient in HTML, CSS, JavaScript, Python, C, and C#, and thrive on solving problems with innovative solutions. Collaborating on creative projects and mastering emerging technologies energizes me.</p>
+
+                <p class="fade-in-text">As a future software engineer, I merge technical expertise with collaboration and continuous learning. By staying abreast of industry advancements, I aim to contribute meaningfully to the field and build a impactful career.</p>
+
+                <p class="fade-in-text">Feel free to explore my portfolio—I’d love to connect and discuss opportunities!</p>
+            </div>
+
+        </div>
+    </section>
+<!-- Skills -->
+    <section id="skills">
+        <div class="skills-container">
+            <h1 class="sub-title">My <span>Skills</span></h1>
+            <h2 class="technical-skills">Technical Skills</h2>
+        <!-- Technical skills bar grafikleri -->
+            <div class="container1" id="skills-list">
+                <div class="technical-bars">
+
+                <div class="bar">
+                    <i class='bx bxl-html5'></i>
+                    <div class="info"><span>HTML</span></div>
+                    <div class="progress-line html"><span></span></div>
+                </div>
+
+                <div class="bar">
+                    <i class='bx bxl-css3'></i>
+                    <div class="info"><span>CSS</span></div>
+                    <div class="progress-line css"><span></span></div>
+                </div>
+
+                <div class="bar">
+                    <i class='bx bxl-javascript'></i>
+                    <div class="info"><span>JavaScript</span></div>
+                    <div class="progress-line javascript"><span></span></div>
+                </div>
+
+                <div class="bar">
+                    <i class='bx bxl-c'></i>
+                    <div class="info"><span>C</span></div>
+                    <div class="progress-line c"><span></span></div>
+                </div>
+
+                <div class="bar">
+                    <i class='bx bxl-c-plus-plus'></i>
+                    <div class="info"><span>C++</span></div>
+                    <div class="progress-line c-plusplus"><span></span></div>
+                </div>
+
+                <div class="bar">
+                    <i class='bx bxl-python'></i>
+                    <div class="info"><span>Python</span></div>
+                    <div class="progress-line python"><span></span></div>
+                </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Dil yetkinliği-->
+    <section id="languages">
+        <h2>Languages</h2>
+        <div class="language-cards">
+    
+            <div class="language-card">
+                <span class="fi fi-gb"></span>
+            <h3>English</h3>
+      <div class="progress-bar">
+        <div class="progress-fill" data-width="85%">Professional</div>
+      </div>
+    </div>
+
+    <div class="language-card">
+      <span class="fi fi-tr"></span>
+      <h3>Turkish</h3>
+      <div class="progress-bar">
+        <div class="progress-fill" data-width="100%">Native</div>
+      </div>
+    </div>
+
+    <div class="language-card">
+      <span class="fi fi-fr"></span>
+      <h3>French</h3>
+      <div class="progress-bar">
+        <div class="progress-fill" data-width="40%">Beginner</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+     <script src="script.js"></script>
+</body>
+</html>
