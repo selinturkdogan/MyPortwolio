@@ -129,7 +129,6 @@ nav {
     color: #ee6d6d;
 }
 
-
 .content p {
     margin-bottom: 2rem;
     line-height: 1.6;
@@ -182,14 +181,12 @@ button:hover {
     padding: 5% 10%;
     background: linear-gradient(to right, #f8efc9, #f6ebab);
 }
-
 .about-container {
     display: flex;
     gap: 3rem;
     align-items: flex-start;
     flex-wrap: wrap;
 }
-
 /* sol taraf fotoğraf için */
 .about-image {
     flex: 1;
@@ -197,7 +194,6 @@ button:hover {
     justify-content: center;
     align-items: flex-start;
 }
-
 .about-image img {
     width: 300px;
     height: 300px;
@@ -206,32 +202,26 @@ button:hover {
     border-radius: 50%;
     box-shadow: 0 10px 30px rgba(205, 64, 117, 0.2);
 }
-
 /* sağ taraf metin için*/
 .about-text {
     flex: 2;
     transition: transform 0.3s ease, opacity 0.3s ease;
     opacity: 1;
 }
-
 .about-text h2 {
     color: #cd4075;
     margin-bottom: 1rem;
     font-size: 3rem;
 }
-
 .about-text h2 span {
     color: #ee6d6d;
 }
-
 .about-text p {
     color: #5a5a5a;
     margin-bottom: 2rem;
     line-height: 1.8;
     font-size: 1.2rem;
-    
 }
-
 .about-text .greating{
     color: #5a5a5a;
     margin-bottom: 0.5rem;
@@ -244,19 +234,18 @@ button:hover {
   transform: translateY(20px);
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
-
 .fade-in-text.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
+/* Technical skills section */
 /* Container ve başlık */
 .skills-container {
   max-width: 800px;
   margin: 40px auto;
   padding: 0 20px;
 }
-
 .sub-title {
   text-align: center;
   font-size: 2.5rem;
@@ -264,11 +253,9 @@ button:hover {
   font-weight: 700;
   color: #cd4075;
 }
-
 .sub-title span {
   color: #ee6d6d;
 }
-
 .technical-skills{
   text-align: center;
   font-size: 2rem;
@@ -276,28 +263,24 @@ button:hover {
   font-weight: 700;
   color: #cd4075;
 }
-
 /* Technical bars container */
 .technical-bars {
   display: flex;
   flex-direction: column;
   gap: 25px;
 }
-
 /* Her bir skill bar */
 .bar {
   display: flex;
   align-items: center;
   gap: 20px;
 }
-
 /* İkon stili */
 .bar i {
   font-size: 3rem;
   color: #cd4075;
   min-width: 50px;
 }
-
 /* Skill ismi */
 .info span {
   font-size: 1.25rem;
@@ -305,7 +288,6 @@ button:hover {
   width: 100px;
   color: #5a5a5a;
 }
-
 /* Progress bar dış kutu */
 .progress-line {
   flex-grow: 1;
@@ -315,7 +297,6 @@ button:hover {
   overflow: hidden;
   position: relative;
 }
-
 /* Progress bar dolgu */
 .progress-line span {
   display: block;
@@ -326,41 +307,36 @@ button:hover {
   transition: width 1.5s ease-in-out;
 }
 
-/* Language Section Genel Yapı */
+/* Language Section */
 #languages {
   max-width: 800px;
   margin: 60px auto;
   padding: 0 20px;
   text-align: center;
 }
-
 #languages h2 {
   font-size: 2.5rem;
   margin-bottom: 30px;
   font-weight: 700;
   color: #cd4075;
 }
-
 /* Kartlar için */
 .language-cards {
   display: flex;
   flex-direction: column;
   gap: 25px;
 }
-
 /* Her bir dil kartı */
 .language-card {
   display: flex;
   align-items: center;
   gap: 20px;
 }
-
 /* Bayrak simgesi */
 .language-card .flag {
   font-size: 2rem;
   min-width: 50px;
 }
-
 /* Dil ismi */
 .language-card h3 {
   font-size: 1.25rem;
@@ -369,7 +345,6 @@ button:hover {
   width: 100px;
   margin: 0;
 }
-
 /* Progress bar dışı */
 .language-card .progress-bar {
   flex-grow: 1;
@@ -379,7 +354,6 @@ button:hover {
   overflow: hidden;
   position: relative;
 }
-
 /* Progress bar iç dolgu */
 .language-card .progress-fill {
   height: 100%;
@@ -393,7 +367,6 @@ button:hover {
   border-radius: 8px;
   width: 0; /* Başlangıçta 0, JS ile doldur */
 }
-
 .fi {
   width: 40px;
   height: 30px;
@@ -402,3 +375,62 @@ button:hover {
   opacity: 0.7;
 }
 
+/*Soft skills section*/
+.skills-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+  padding: 40px;
+  color: #cd4075;
+  background: linear-gradient(to right, #f8efc9, #f6ebab);
+}
+.skill-card {
+  position: relative;
+  width: 240px;
+  height: 140px;
+  background-color: #f2ad83;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transition: height 0.3s ease;
+  overflow: hidden;
+  cursor: pointer;
+}
+.skill-card:hover {
+  height: 260px;
+}
+.skill-title {
+  font-size: 20px;
+  font-weight: 600;
+  padding: 20px;
+  color: #cd4075;
+}
+.skill-subskills {
+  padding: 0 20px 20px;
+  opacity: 0;
+  max-height: 0;
+  transition: opacity 0.4s ease, max-height 0.4s ease;
+}
+.skill-card:hover .skill-subskills {
+  opacity: 1;
+  max-height: 600px;
+}
+.subskill-list {
+  list-style: disc;
+  padding-left: 18px;
+  margin: 0;
+}
+.subskill-item {
+  font-size: 15px;
+  color: #5a5a5a;
+  margin-bottom: 6px;
+}
+.skills-heading {
+  width: 100%;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #cd4075;
+  font-family: 'Segoe UI', sans-serif;
+}
