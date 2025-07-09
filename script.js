@@ -166,3 +166,41 @@ function initSkillsAnimation() {
     });
   })
 });
+
+
+//Certificates
+document.addEventListener("DOMContentLoaded", () => {
+  fetch("certificates.json")
+    .then(response => response.json())
+    .then(data => renderCertificates(data))
+    .catch(error => console.error("JSON verisi yüklenemedi:", error));
+});
+
+function renderCertificates(certificates) {
+  const container = document.getElementById("certificatesGrid");
+
+  certificates.forEach(cert => {
+    const card = document.createElement("a");
+    card.className = "certificate-card";
+    card.href = cert.file;
+    card.target = "_blank";
+    card.rel = "noopener noreferrer";
+
+    card.innerHTML = `
+      <div class="certificate-title">${cert.title}</div>
+      <div class="certificate-meta">Date: ${formatDate(cert.date)}</div>
+      <div class="certificate-meta">Instution: ${cert.issuer}</div>
+    `;
+
+    container.appendChild(card);
+  });
+}
+
+function formatDate(dateString) {
+  const date = new Date(dateString);
+  return date.toLocaleDateString("tr-TR", {
+    year: "numeric",
+    month: "long",
+    day: "numeric"
+  });
+}

@@ -376,6 +376,7 @@ button:hover {
 
 /*Soft skills section*/
 .skills-section {
+  font-size: 30px;
   display: flex;
   flex-wrap: wrap;
   gap: 32px;
@@ -388,7 +389,7 @@ button:hover {
   position: relative;
   width: 240px;
   height: 150px;
-  background-color: #f2ad83;
+  background-color: white;
   border-radius: 16px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
   transition: height 0.3s ease;
@@ -433,4 +434,57 @@ button:hover {
   justify-content: center;
   gap: 32px;
   padding: 20px;
+}
+
+/*sertifika section */
+.certificates-section {
+  padding: 60px 10%;
+  background: linear-gradient(to right, #f8efc9, #f6ebab);
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  font-weight: 700;
+  color: #cd4075;
+}
+
+/* Grid yapısı */
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* Sertifika kartı */
+.certificate-card {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(205, 64, 117, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  border: 2px solid #f2ad83;
+}
+
+.certificate-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 24px rgba(205, 64, 117, 0.15);
+  border-color: #cd4075;
+}
+
+/* Sertifika başlığı */
+.certificate-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #cd4075;
+  margin-bottom: 10px;
+}
+
+/* Meta bilgisi */
+.certificate-meta {
+  font-size: 0.95rem;
+  color: #5a5a5a;
 }
