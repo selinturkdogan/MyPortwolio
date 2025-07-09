@@ -1,17 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
-
-  // Github ve Linkedin linkleri
+// Github linki
   document.getElementById("githubLink").addEventListener("click", function(event) {
     event.preventDefault();
     window.open("https://github.com/selinturkdogan", "_blank");
   });
-
+// Linkedin linki
   document.getElementById("linkedinLink").addEventListener("click", function(event) {
     event.preventDefault();
     window.open("https://www.linkedin.com/in/selinturkdogan", "_blank");
   });
 
-  // Paragraflar scroll efekti
+// Paragraflar scroll efekti
   const observerText = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -24,8 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
     observerText.observe(el);
   });
 
- 
-
 // Technical skills animasyonu ve barların doluluk oranı
 fetch('technicalSkills.json')
   .then(response => response.json())
@@ -33,23 +30,23 @@ fetch('technicalSkills.json')
     const container = document.getElementById('technical-bars');
     
     data.skills.forEach((skill, index) => {
-      // Bar container oluştur
+      // Bar container oluşturma
       const barDiv = document.createElement('div');
       barDiv.classList.add('bar');
       
-      // İkon ekle
+      // İkon ekleme
       const icon = document.createElement('i');
       icon.className = skill.icon;
       icon.style.color = skill.color || '#cd4075';
       
-      // Skill ismi ekle
+      // Skill ismi ekleme
       const infoDiv = document.createElement('div');
       infoDiv.classList.add('info');
       const span = document.createElement('span');
       span.textContent = skill.name;
       infoDiv.appendChild(span);
       
-      // Progress line oluştur
+      // Progress line oluşturma
       const progressLine = document.createElement('div');
       progressLine.classList.add('progress-line');
       progressLine.setAttribute('data-skill', skill.name.toLowerCase().replace(/\+/g, '-plus'));
@@ -61,33 +58,32 @@ fetch('technicalSkills.json')
       
       progressLine.appendChild(progressSpan);
       
-      // Elementleri birleştir
+      // Elementleri birleştirmek icin
       barDiv.appendChild(icon);
       barDiv.appendChild(infoDiv);
       barDiv.appendChild(progressLine);
       
-      // Container'a ekle
+      // Container'a ekleme
       container.appendChild(barDiv);
     });
     
-    // Animasyon observer'ını başlat
+    // Animasyon observerını başlatma
     initSkillsAnimation();
   })
-  .catch(err => console.error('Technical skills yüklenirken hata:', err));
 
 // Skills animasyon fonksiyonu
 function initSkillsAnimation() {
   const skillsObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        // Tüm progress bar'ları bul ve animate et
+        // Tüm progress barları bulup ve animate etme
         const progressBars = document.querySelectorAll('.progress-line span');
         
         progressBars.forEach((bar, index) => {
           const level = bar.getAttribute('data-level');
           setTimeout(() => {
             bar.style.width = level;
-          }, index * 200); // Her bar için 200ms gecikme
+          }, index * 200); // Her bar için 200ms gecikmeyi saglar
         });
         
         // Tek seferlik animasyon
@@ -103,7 +99,7 @@ function initSkillsAnimation() {
     skillsObserver.observe(skillsSection);
   }
 }
-  // Language bar animasyonu için IntersectionObserver
+  // Language bar animasyonu
   const fills = document.querySelectorAll(".progress-fill");
   const observerLang = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
@@ -118,7 +114,7 @@ function initSkillsAnimation() {
 
   fills.forEach(fill => observerLang.observe(fill));
 
-  // Soft skills fetch ve dinamik kart oluşturma
+  // Soft skills kart oluşturma
   fetch('softSkills.json')
   .then(response => response.json())
   .then(data => {
@@ -129,7 +125,7 @@ function initSkillsAnimation() {
 
       const title = document.createElement('h3');
       title.classList.add('skill-title');
-      // İkon html olarak eklenmeli
+      // İkonu html olarak ekler
       title.innerHTML = `${skill.icon || ''} ${skill.title}`;
       card.appendChild(title);
 
@@ -152,7 +148,7 @@ function initSkillsAnimation() {
       card.appendChild(subskillsDiv);
       container.appendChild(card);
 
-      // Aç/Kapat animasyon event listener
+      // Aç/Kapat animasyonu (EventListener)
       card.addEventListener('click', () => {
         const isOpen = card.classList.contains('open');
         if (isOpen) {
@@ -169,5 +165,4 @@ function initSkillsAnimation() {
       });
     });
   })
-  .catch(err => console.error('Error loading softSkills.json:', err));
 });
