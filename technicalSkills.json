@@ -1,0 +1,34 @@
+{
+  "skills": [
+    {
+      "name": "HTML",
+      "icon": "bx bxl-html5",
+      "level": "90%"
+    },
+    {
+      "name": "CSS",
+      "icon": "bx bxl-css3",
+      "level": "85%"
+    },
+    {
+      "name": "JavaScript",
+      "icon": "bx bxl-javascript",
+      "level": "60%"
+    },
+    {
+      "name": "C",
+      "icon": "bx bxl-c",
+      "level": "50%"
+    },
+    {
+      "name": "C++",
+      "icon": "bx bxl-c-plus-plus",
+      "level": "50%"
+    },
+    {
+      "name": "Python",
+      "icon": "bx bxl-python",
+      "level": "50%"
+    }
+  ]
+}

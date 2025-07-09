@@ -1,0 +1,46 @@
+[
+    {
+        "title": "Communication",
+        "icon": "🗣️",
+        "subskills": [
+            "Verbal Communication",
+            "Written Communication",
+            "Active Listening",
+            "Giving Feedback",
+            "Persuasion"
+        ]
+    },
+    {
+    "title": "Time & Organization",
+    "icon": "🧭",
+    "subskills": [
+      "Time Management",
+      "Planning",
+      "Procrastination Control",
+      "Organization",
+      "Focus"
+    ]
+  },
+  {
+    "title": "Leadership",
+    "icon": "🧠",
+    "subskills": [
+      "Decision Making",
+      "Responsibility",
+      "Motivation",
+      "Problem Solving",
+      "Guidance"
+    ]
+  },
+  {
+    "title": "Teamwork",
+    "icon": "🤝",
+    "subskills": [
+      "Collaboration",
+      "Task Sharing",
+      "Adaptability",
+      "Common Goals",
+      "Trust"
+    ]
+  } 
+]

@@ -306,74 +306,73 @@ button:hover {
   border-radius: 8px;
   transition: width 1.5s ease-in-out;
 }
-
-/* Language Section */
-#languages {
-  max-width: 800px;
-  margin: 60px auto;
-  padding: 0 20px;
-  text-align: center;
-}
-#languages h2 {
-  font-size: 2.5rem;
-  margin-bottom: 30px;
-  font-weight: 700;
-  color: #cd4075;
-}
-/* Kartlar için */
-.language-cards {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-}
-/* Her bir dil kartı */
-.language-card {
+.bar {
   display: flex;
   align-items: center;
   gap: 20px;
+  margin-bottom: 20px;
 }
-/* Bayrak simgesi */
-.language-card .flag {
-  font-size: 2rem;
+
+.bar i {
+  font-size: 3rem;
   min-width: 50px;
+  transition: transform 0.3s ease;
 }
-/* Dil ismi */
-.language-card h3 {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: #5a5a5a;
-  width: 100px;
-  margin: 0;
+
+.bar:hover i {
+  transform: scale(1.1);
 }
-/* Progress bar dışı */
-.language-card .progress-bar {
-  flex-grow: 1;
-  background-color: #f2ad83;
-  height: 12px;
-  border-radius: 8px;
-  overflow: hidden;
-  position: relative;
-}
-/* Progress bar iç dolgu */
-.language-card .progress-fill {
-  height: 100%;
-  background-color: #cd4075;
-  color: #fff;
-  font-size: 0.85rem;
-  text-align: center;
-  line-height: 12px;
-  white-space: nowrap;
-  transition: width 1.5s ease-in-out;
-  border-radius: 8px;
-  width: 0; /* Başlangıçta 0, JS ile doldur */
-}
-.fi {
-  width: 40px;
-  height: 30px;
-  border-radius: 4px;
-  flex-shrink: 0;
-  opacity: 0.7;
-}
+
+
+#languages {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 0 20px;
+    text-align: center;
+  }
+  #languages h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    font-weight: 700;
+    color: #cd4075;
+  }
+  .language-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+  .language-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .language-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #5a5a5a;
+    width: 100px;
+    margin: 0;
+  }
+  .language-card .progress-bar {
+    flex-grow: 1;
+    background-color: #f2ad83;
+    height: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+  }
+  .language-card .progress-fill {
+    height: 100%;
+    background-color: #cd4075;
+    color: #fff;
+    font-size: 0.85rem;
+    text-align: center;
+    line-height: 20px;
+    white-space: nowrap;
+    border-radius: 8px 0 0 8px;
+    width: 0;
+    transition: width 1.5s ease-in-out;
+  }
 
 /*Soft skills section*/
 .skills-section {
@@ -388,16 +387,13 @@ button:hover {
 .skill-card {
   position: relative;
   width: 240px;
-  height: 140px;
+  height: 150px;
   background-color: #f2ad83;
   border-radius: 16px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
   transition: height 0.3s ease;
   overflow: hidden;
   cursor: pointer;
-}
-.skill-card:hover {
-  height: 260px;
 }
 .skill-title {
   font-size: 20px;
@@ -409,11 +405,8 @@ button:hover {
   padding: 0 20px 20px;
   opacity: 0;
   max-height: 0;
+  overflow: hidden;
   transition: opacity 0.4s ease, max-height 0.4s ease;
-}
-.skill-card:hover .skill-subskills {
-  opacity: 1;
-  max-height: 600px;
 }
 .subskill-list {
   list-style: disc;
@@ -424,7 +417,7 @@ button:hover {
   font-size: 15px;
   color: #5a5a5a;
   margin-bottom: 6px;
-}
+}*/
 .skills-heading {
   width: 100%;
   text-align: center;
@@ -433,4 +426,11 @@ button:hover {
   margin-bottom: 40px;
   color: #cd4075;
   font-family: 'Segoe UI', sans-serif;
+}
+#skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+  padding: 20px;
 }
