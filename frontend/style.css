@@ -401,11 +401,11 @@ button:hover {
 .skills-heading {
   width: 100%;
   text-align: center;
-  font-size: 32px;
   font-weight: 700;
-  margin-bottom: 40px;
   color: #cd4075;
   font-family: 'Segoe UI', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
 }
 #skills-container {
   display: flex;
@@ -618,7 +618,7 @@ button:hover {
     font-size: 2rem;
   }
   .skills-heading {
-    font-size: 28px;
+    font-size: 40px;
   }
   .skill-card {
     width: 180px;
@@ -753,4 +753,114 @@ button:hover {
 .notification.success {
   background-color: #cd4075;
   box-shadow: 0 4px 15px rgba(76, 175, 80, 0.4);
+}
+
+/*Portfolio*/
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 10px 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.portfolio-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(205,64,117,0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid #f2ad83;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 24px rgba(205, 64, 117, 0.15);
+  border-color: #cd4075;
+}
+
+.portfolio-heading{
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    font-weight: 700;
+    color: #cd4075;
+}
+/* Portfolio Card Image */
+.portfolio-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 10px rgba(205, 64, 117, 0.1);
+}
+
+/* Portfolio Card Title */
+.portfolio-card h3 {
+  margin: 10px 0 12px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #cd4075;
+}
+
+/* Portfolio Card Description */
+.portfolio-card p {
+  font-size: 1rem;
+  color: #5a5a5a;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+/* Portfolio Card Link */
+.portfolio-card a {
+  display: inline-block;
+  margin-top: 8px;
+  color: #cd4075;
+  font-weight: 600;
+  text-decoration: none;
+  border: 2px solid #cd4075;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-card a:hover {
+  background-color: #ee6d6d;
+  color: white;
+  box-shadow: 0 4px 12px rgba(238, 109, 109, 0.5);
+}
+
+.portfolio-section{
+  font-size: 1.25rem;
+  font-weight: 1000;
+  color: #cd4075;
+  margin-bottom: 10px;
+  text-align: center;
+}
+/* Responsive: Mobile & Small Devices */
+@media (max-width: 600px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 10px 3%;
+  }
+
+  .portfolio-card {
+    padding: 16px;
+  }
+
+  .portfolio-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .portfolio-card p {
+    font-size: 0.95rem;
+  }
+
+  .portfolio-card a {
+    padding: 10px 22px;
+    font-size: 1rem;
+  }
 }

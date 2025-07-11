@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Retro Sytle Snake Game",
+    "description": "The Retro Snake Game project aims to recreate the nostalgic experience of the classic snake game using Unity and C#. The project’s objective is to deliver a functional, interactive, and visually clean game in which the player controls a snake to collect food and avoid collisions. The system features a score tracking mechanism, game over screen, restart and exit options, and a difficulty selection menu that dynamically adjusts the snake’s speed. The design follows modular principles and adheres to software engineering best practices. The game was built as a stand-alone single-player system with scope for future enhancements such as multiplayer mode and additional game mechanics.",
+    "technologies": ["C#", "Unity"],
+    "github": "https://github.com/selinturkdogan/Snake-Game",
+    "image": "retroSnakeProject.png"
+  },
+  {
+    "name": "Portfolio Website",
+    "description": "This personal portfolio website is designed to present my professional profile in a clean and user-friendly manner. Built with HTML, CSS, JavaScript, and Node.js, the site offers a responsive layout that works well across different devices. It includes sections for social media links, downloadable CV, certifications, an about me page, and showcases both my technical and soft skills. Additionally, it highlights the foreign languages I speak and features a contact form to facilitate direct communication. JSON is used to handle dynamic content efficiently, ensuring smooth data flow between the front-end and back-end. The project follows best practices for web development, making it scalable and easy to maintain.",
+    "technologies": ["HTML", "CSS", "JavaScript", "Node.js", "JSON (as a data format)"],
+    "github": "https://github.com/selinturkdogan/MyPortwolio",
+    "image": "portfolioProject.png"
+  }
+]
