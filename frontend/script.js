@@ -174,7 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(data => renderCertificates(data))
     .catch(error => console.error("JSON verisi yüklenemedi:", error));
 
-  // Contact form submit işlemi
+  // Contact form submit 
   document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault();
 
@@ -202,9 +202,7 @@ document.addEventListener('DOMContentLoaded', () => {
     .catch(() => showNotification('Sunucuya bağlanırken hata oluştu.', 'error'));
   });
 
-}); // DOMContentLoaded kapanışı
-
-// Yardımcı fonksiyonlar
+});
 
 function renderCertificates(certificates) {
   const container = document.getElementById("certificatesGrid");
@@ -238,7 +236,7 @@ function formatDate(dateString) {
 function showNotification(message, type = 'success') {
   const notification = document.getElementById('notification');
   notification.textContent = message;
-  notification.className = 'notification'; // önce tüm classları temizle
+  notification.className = 'notification'; // önce tüm classları temizler
   notification.classList.add('show');
   
   // Türüne göre class ekle
@@ -248,7 +246,7 @@ function showNotification(message, type = 'success') {
     notification.classList.add('error');
   }
 
-  // 3 saniye sonra gizle
+  // 3 saniye sonra gizler mesaji
   setTimeout(() => {
     notification.classList.remove('show');
   }, 3000);
