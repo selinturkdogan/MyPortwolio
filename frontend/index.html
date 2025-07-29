@@ -23,6 +23,10 @@
                 <a href="#certificates">Certificates</a>
                 <a href="#portfolio">Portfolio</a>
                 <a href="#contact" class="contact-btn">Contact Me!</a>
+
+                <a href="#settings" class="settings-link" title="Settings">
+      <i class="fa-solid fa-gear"></i>
+    </a>
             </div>
         </div>
     </nav>
@@ -167,6 +171,29 @@
     </div>
   </div>
 </section>
+
+<!-- Settings Panel -->
+<div id="settingsPanel" class="settings-panel hidden">
+  <h3>Settings</h3>
+  
+  <div class="setting-item">
+    <label for="languageSelect">Language:</label>
+    <select id="languageSelect">
+      <option value="en">English</option>
+      <option value="tr">Turkish</option>
+    </select>
+  </div>
+
+  <div class="setting-item">
+    <label for="darkModeToggle">Dark Mode:</label>
+    <input type="checkbox" id="darkModeToggle" />
+  </div>
+  
+
+  <button id="closeSettingsBtn">Close</button>
+</div>
+
+
 
     <script src="script.js"></script>
 

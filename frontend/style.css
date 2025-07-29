@@ -376,10 +376,13 @@ button:hover {
   cursor: pointer;
 }
 .skill-title {
+  display: flex;
   font-size: 20px;
   font-weight: 600;
   padding: 20px;
   color: #cd4075;
+  text-align: center;
+  gap: 8px;
 }
 .skill-subskills {
   padding: 0 20px 20px;
@@ -863,4 +866,419 @@ button:hover {
     padding: 10px 22px;
     font-size: 1rem;
   }
+}
+.settings-link {
+  font-size: 1.2rem;
+  color: #ee6d6d;
+  margin-left: 15px;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.settings-link:hover {
+  color: #cd4075; /* Mevcut pembe tonunla uyumlu */
+}
+
+.settings-panel {
+  text-align: center;
+  color: #cd4075;
+  margin-bottom: 15px;
+  position: fixed;
+  top: 60px; /* navbar altı */
+  right: 20px;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 220px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* biraz daha hafif gölge */
+  z-index: 1000;
+  border-radius: 8px;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.settings-panel.hidden {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.setting-item {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  color: #ee6d6d;
+}
+
+#closeSettingsBtn {
+  background-color: #cd4075;
+  color: white;
+  border: none;
+  padding: 10px 0;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+#closeSettingsBtn:hover {
+  background-color: #a8325a;
+}
+
+/* ===== DARK MODE ===== */
+body.dark-mode {
+  background-color: black;
+  color: #ddd;
+  background: #111;
+}
+
+/* Navbar */
+body.dark-mode nav {
+  background: linear-gradient(to right, #222, #111);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+body.dark-mode .logo {
+  color: #ff7fa3;
+}
+
+body.dark-mode .links a {
+  color: #f58ea1;
+}
+
+body.dark-mode .links a:hover {
+  color: #ff7fa3;
+}
+
+body.dark-mode .links a::after {
+  background-color: #ff7fa3;
+}
+
+/* Contact Button */
+body.dark-mode .contact-btn {
+  border-color: #ff7fa3;
+  color: #ff7fa3;
+}
+
+body.dark-mode .contact-btn:hover {
+  background-color: #ff7fa3;
+  color: #111;
+}
+
+/* Main container and image */
+body.dark-mode .main-container {
+  background-color: #111;
+}
+
+body.dark-mode .image {
+  background: linear-gradient(to right, #eadfdf, #111);
+  box-shadow: 0 4px 20px rgba(255, 127, 163, 0.3);
+}
+
+body.dark-mode .image img {
+  box-shadow: 0 10px 30px rgba(255, 127, 163, 0.4);
+}
+
+/* Content text */
+body.dark-mode .content h1 {
+  color: #ff7fa3;
+}
+
+body.dark-mode .content h1 span {
+  color: #f58ea1;
+}
+
+body.dark-mode .content p {
+  color: #ccc;
+}
+
+/* Social links */
+body.dark-mode .social-links a {
+  border-color: #f58ea1;
+  color: #f58ea1;
+}
+
+body.dark-mode .social-links a:hover {
+  background-color: #f58ea1;
+  color: #222;
+}
+
+/* Buttons */
+body.dark-mode button {
+  background-color: #ff7fa3;
+  color: #222;
+}
+
+body.dark-mode button:hover {
+  background-color: #f58ea1;
+  box-shadow: 0 5px 15px rgba(245, 142, 161, 0.5);
+}
+
+/* About Section */
+body.dark-mode #about {
+  background: black;
+}
+
+body.dark-mode .about-text h2 {
+  color: #ff7fa3;
+}
+
+body.dark-mode .about-text h2 span {
+  color: #f58ea1;
+}
+
+body.dark-mode .about-text p,
+body.dark-mode .about-text .greating {
+  color: #ccc;
+}
+
+/* Skills Section */
+body.dark-mode .skills-container{
+  background: #111;
+}
+
+body.dark-mode #skills{
+  background: #111;
+}
+
+body.dark-mode #home {
+  background: black;
+}
+
+body.dark-mode #languages {
+  color: #ddd;
+  background: #111;
+}
+
+body.dark-mode .sub-title,
+body.dark-mode .technical-skills {
+  color: #ff7fa3;
+}
+
+body.dark-mode .bar i {
+  color: #ff7fa3;
+}
+
+body.dark-mode .info span {
+  color: #bbb;
+}
+
+body.dark-mode .progress-line {
+  background-color: #444;
+}
+
+body.dark-mode .progress-line span {
+  background-color: #ff7fa3;
+}
+
+body.dark-mode .language-card h3 {
+  color: #ccc;
+}
+
+body.dark-mode #languages{
+  background: #111;
+}
+body.dark-mode .language-card .progress-bar {
+  background-color: #444;
+}
+
+body.dark-mode .language-card .progress-fill {
+  background-color: #ff7fa3;
+}
+
+/* Soft skills */
+body.dark-mode .skills-section {
+  background: black;
+  color: #ff7fa3;
+}
+
+body.dark-mode .skill-card {
+  background-color: #333;
+  box-shadow: 0 6px 16px rgba(255, 127, 163, 0.1);
+}
+
+body.dark-mode .skill-title {
+  color: #ff7fa3;
+}
+
+body.dark-mode .subskill-item {
+  color: #ccc;
+}
+
+/* Certificates */
+body.dark-mode .certificates-section {
+  background: black; 
+}
+
+body.dark-mode .section-title {
+  color: #ff7fa3;
+}
+
+body.dark-mode .certificate-card {
+  background-color: #333;
+  border-color: #ff7fa3;
+  box-shadow: 0 6px 16px rgba(255, 127, 163, 0.1);
+  color: #ccc;
+}
+
+body.dark-mode .certificate-card:hover {
+  border-color: #f58ea1;
+  box-shadow: 0 10px 24px rgba(255, 127, 163, 0.3);
+}
+
+body.dark-mode .certificate-title {
+  color: #ff7fa3;
+}
+
+body.dark-mode .certificate-meta {
+  color: #bbb;
+}
+
+/* Contact Section */
+body.dark-mode .contact-section {
+  background: black
+}
+
+body.dark-mode .contact-form input,
+body.dark-mode .contact-form textarea {
+  background-color: #333;
+  border-color: #ff7fa3;
+  color: #ddd;
+}
+
+body.dark-mode .contact-form input:focus,
+body.dark-mode .contact-form textarea:focus {
+  border-color: #f58ea1;
+}
+
+body.dark-mode .contact-submit {
+  background-color: #ff7fa3;
+  color: #222;
+}
+
+body.dark-mode .contact-submit:hover {
+  background-color: #f58ea1;
+}
+
+body.dark-mode .contact-info {
+  color: #bbb;
+}
+
+body.dark-mode .contact-info i {
+  color: #ff7fa3;
+}
+
+/* Notification */
+body.dark-mode .notification {
+  background-color: #ff7fa3;
+  box-shadow: 0 4px 15px rgba(255, 127, 163, 0.6);
+  color: #222;
+}
+
+body.dark-mode .notification.error {
+  background-color: #e57373;
+  box-shadow: 0 4px 15px rgba(229, 115, 115, 0.6);
+}
+
+body.dark-mode .notification.success {
+  background-color: #81c784;
+  box-shadow: 0 4px 15px rgba(129, 199, 132, 0.6);
+  color: #222;
+}
+
+/* Portfolio */
+body.dark-mode .portfolio-grid {
+  background: black;
+}
+body.dark-mode .portfolio-section h2{
+  background-color: #111;
+}
+
+
+body.dark-mode .portfolio-card {
+  background-color: #333;
+  border-color: #ff7fa3;
+  box-shadow: 0 6px 16px rgba(255, 127, 163, 0.1);
+  color: #ccc;
+}
+
+body.dark-mode .portfolio-card:hover {
+  border-color: #f58ea1;
+  box-shadow: 0 10px 24px rgba(255, 127, 163, 0.3);
+}
+
+body.dark-mode .portfolio-card h3 {
+  color: #ff7fa3;
+}
+
+body.dark-mode .portfolio-card p {
+  color: #bbb;
+}
+
+body.dark-mode .portfolio-card a {
+  color: #ff7fa3;
+  border-color: #ff7fa3;
+}
+
+body.dark-mode .portfolio-card a:hover {
+  background-color: #f58ea1;
+  color: #222;
+}
+
+/* Settings Panel */
+body.dark-mode .settings-panel {
+  background: #1f1f1f;
+  border-color: #444;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.7);
+  color: #ccc;
+}
+
+body.dark-mode .setting-item {
+  color: #ccc;
+}
+
+body.dark-mode .settings-link {
+  color: #bbb;
+}
+
+body.dark-mode .settings-link:hover {
+  color: #ff7fa3;
+}
+
+body.dark-mode #closeSettingsBtn {
+  background-color: #cd4075;
+  color: #fff;
+}
+
+body.dark-mode #closeSettingsBtn:hover {
+  background-color: #a8325a;
+}
+
+/* Portfolio Heading */
+body.dark-mode .portfolio-heading {
+  color: #ff7fa3;
+}
+
+body.dark-mode .portfolio-section {
+  color: #ff7fa3;
+}
+
+/* Fade-in text */
+body.dark-mode .fade-in-text {
+  color: #ccc;
+}
+
+/* Portfolio link */
+body.dark-mode .portfolio-card a {
+  color: #ff7fa3;
+  border-color: #ff7fa3;
+}
+
+body.dark-mode .portfolio-card a:hover {
+  background-color: #f58ea1;
+  color: #222;
 }

@@ -1,7 +1,7 @@
 [
     {
         "title": "Communication",
-        "icon": "🗣️",
+        "icon": "<i class='fa-solid fa-comments'></i>",
         "subskills": [
             "Verbal Communication",
             "Written Communication",
@@ -12,7 +12,7 @@
     },
     {
     "title": "Time & Organization",
-    "icon": "🧭",
+    "icon": "<i class='fa-solid fa-clock'></i>",
     "subskills": [
       "Time Management",
       "Planning",
@@ -23,7 +23,7 @@
   },
   {
     "title": "Leadership",
-    "icon": "🧠",
+    "icon": "<i class='fa-solid fa-user-tie'></i>",
     "subskills": [
       "Decision Making",
       "Responsibility",
@@ -34,7 +34,7 @@
   },
   {
     "title": "Teamwork",
-    "icon": "🤝",
+    "icon": "<i class='fa-solid fa-people-group'></i>",
     "subskills": [
       "Collaboration",
       "Task Sharing",

@@ -274,3 +274,64 @@ fetch('projects.json')
     });
   })
   .catch(err => console.error('Projeler yüklenirken hata:', err));
+
+  document.addEventListener('DOMContentLoaded', () => {
+  const settingsIcon = document.querySelector('.settings-link');
+  const settingsPanel = document.getElementById('settingsPanel');
+  const closeBtn = document.getElementById('closeSettingsBtn');
+  const darkModeToggle = document.getElementById('darkModeToggle');
+  const languageSelect = document.getElementById('languageSelect');
+
+  // Ayarlar panelini aç/kapat
+  settingsIcon.addEventListener('click', (e) => {
+    e.preventDefault();
+    settingsPanel.classList.toggle('hidden');
+  });
+
+  closeBtn.addEventListener('click', () => {
+    settingsPanel.classList.add('hidden');
+  });
+
+  // Dark mode toggle
+darkModeToggle.addEventListener('change', () => {
+  if (darkModeToggle.checked) {
+    document.body.classList.add('dark-mode');
+    localStorage.setItem('darkMode', 'enabled');
+  } else {
+    document.body.classList.remove('dark-mode');
+    localStorage.setItem('darkMode', 'disabled');
+  }
+});
+// Sayfa yüklendiğinde dark mode durumunu kontrol et
+window.addEventListener('load', () => {
+  if (localStorage.getItem('darkMode') === 'enabled') {
+    document.body.classList.add('dark-mode');
+    darkModeToggle.checked = true;
+  } else {
+    document.body.classList.remove('dark-mode');
+    darkModeToggle.checked = false;
+  }
+});
+
+
+
+  // Dil seçimi (örnek: dil seçimini localStorage'de saklayabiliriz)
+  languageSelect.addEventListener('change', () => {
+    const lang = languageSelect.value;
+    localStorage.setItem('language', lang);
+    alert(`Language changed to: ${lang === 'en' ? 'English' : 'Türkçe'}`);
+    // Buraya dil değiştirme fonksiyonu ekleyebilirsin
+  });
+
+  // Sayfa yüklendiğinde localStorage'den ayarları uygula
+  if(localStorage.getItem('darkMode') === 'enabled'){
+    darkModeToggle.checked = true;
+    document.body.classList.add('dark-mode');
+  }
+
+  if(localStorage.getItem('language')){
+    languageSelect.value = localStorage.getItem('language');
+  }
+});
+
+
