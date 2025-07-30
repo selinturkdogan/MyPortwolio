@@ -177,18 +177,20 @@
   <h3>Settings</h3>
   
   <div class="setting-item">
-    <label for="languageSelect">Language:</label>
-    <select id="languageSelect">
-      <option value="en">English</option>
-      <option value="tr">Turkish</option>
-    </select>
+  <label>Language:</label>
+  <div id="languageSwitch" class="lang-switch">
+    <span data-lang="en" class="active">EN</span>
+    <span data-lang="tr">TR</span>
   </div>
+</div>
 
-  <div class="setting-item">
-    <label for="darkModeToggle">Dark Mode:</label>
-    <input type="checkbox" id="darkModeToggle" />
+
+   <div class="setting-item">
+    <label>Dark Mode:</label>
+    <div id="darkModeSwitch" class="switch"></div>
   </div>
   
+<div id="langNotification" class="lang-notification"></div>
 
   <button id="closeSettingsBtn">Close</button>
 </div>

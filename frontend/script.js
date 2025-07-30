@@ -279,7 +279,7 @@ fetch('projects.json')
   const settingsIcon = document.querySelector('.settings-link');
   const settingsPanel = document.getElementById('settingsPanel');
   const closeBtn = document.getElementById('closeSettingsBtn');
-  const darkModeToggle = document.getElementById('darkModeToggle');
+  const darkModeSwitch = document.getElementById('darkModeSwitch');
   const languageSelect = document.getElementById('languageSelect');
 
   // Ayarlar panelini aç/kapat
@@ -292,46 +292,52 @@ fetch('projects.json')
     settingsPanel.classList.add('hidden');
   });
 
-  // Dark mode toggle
-darkModeToggle.addEventListener('change', () => {
-  if (darkModeToggle.checked) {
-    document.body.classList.add('dark-mode');
-    localStorage.setItem('darkMode', 'enabled');
-  } else {
-    document.body.classList.remove('dark-mode');
-    localStorage.setItem('darkMode', 'disabled');
-  }
-});
-// Sayfa yüklendiğinde dark mode durumunu kontrol et
-window.addEventListener('load', () => {
-  if (localStorage.getItem('darkMode') === 'enabled') {
-    document.body.classList.add('dark-mode');
-    darkModeToggle.checked = true;
-  } else {
-    document.body.classList.remove('dark-mode');
-    darkModeToggle.checked = false;
-  }
-});
+  // Dark mode toggle (switch)
+  darkModeSwitch.addEventListener('click', () => {
+    darkModeSwitch.classList.toggle('active');
+    const isActive = darkModeSwitch.classList.contains('active');
 
-
-
-  // Dil seçimi (örnek: dil seçimini localStorage'de saklayabiliriz)
-  languageSelect.addEventListener('change', () => {
-    const lang = languageSelect.value;
-    localStorage.setItem('language', lang);
-    alert(`Language changed to: ${lang === 'en' ? 'English' : 'Türkçe'}`);
-    // Buraya dil değiştirme fonksiyonu ekleyebilirsin
+    if (isActive) {
+      document.body.classList.add('dark-mode');
+      localStorage.setItem('darkMode', 'enabled');
+    } else {
+      document.body.classList.remove('dark-mode');
+      localStorage.setItem('darkMode', 'disabled');
+    }
   });
 
-  // Sayfa yüklendiğinde localStorage'den ayarları uygula
-  if(localStorage.getItem('darkMode') === 'enabled'){
-    darkModeToggle.checked = true;
+  // Sayfa yüklendiğinde durumu yükle
+  if (localStorage.getItem('darkMode') === 'enabled') {
     document.body.classList.add('dark-mode');
+    darkModeSwitch.classList.add('active');
+  } else {
+    document.body.classList.remove('dark-mode');
+    darkModeSwitch.classList.remove('active');
   }
 
-  if(localStorage.getItem('language')){
-    languageSelect.value = localStorage.getItem('language');
-  }
+  // Dil seçimi
+ function showLangNotification(message) {
+  const notif = document.getElementById('langNotification');
+  notif.textContent = message;
+  notif.classList.add('show');
+
+  setTimeout(() => {
+    notif.classList.remove('show');
+  }, 2000);
+}
+
+const langSwitch = document.getElementById('languageSwitch');
+
+langSwitch.addEventListener('click', () => {
+  const newLang = langSwitch.dataset.active === 'en' ? 'tr' : 'en';
+  langSwitch.dataset.active = newLang;
+  localStorage.setItem('language', newLang);
+  showLangNotification(`Language changed to: ${newLang === 'en' ? 'English' : 'Türkçe'}`);
 });
 
-
+// Sayfa açıldığında kaydedilmiş dili uygula
+const savedLang = localStorage.getItem('language');
+if (savedLang) {
+  langSwitch.dataset.active = savedLang;
+}
+  });

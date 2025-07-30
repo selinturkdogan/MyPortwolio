@@ -928,6 +928,101 @@ button:hover {
 #closeSettingsBtn:hover {
   background-color: #a8325a;
 }
+/*dark mod buton düzenlemesi */
+.switch {
+  width: 50px;
+  height: 26px;
+  background-color: #ccc;
+  border-radius: 26px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.switch::before {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+.switch.active {
+  background-color: #cd4075;
+}
+.switch.active::before {
+  transform: translateX(24px);
+}
+/*language buton*/
+.lang-switch {
+  position: relative;
+  width: 80px;
+  height: 34px;
+  background: #ccc;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5px;
+  box-sizing: border-box;
+  transition: background 0.3s ease;
+}
+
+.lang-switch span {
+  width: 50%;
+  text-align: center;
+  z-index: 2;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #fff;
+  user-select: none;
+}
+
+.lang-switch::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 36px;
+  height: 28px;
+  background: #cd4075;
+  border-radius: 50px;
+  transition: left 0.3s ease;
+  z-index: 1;
+}
+
+.lang-switch[data-active="tr"]::after {
+  left: 41px;
+}
+
+.lang-notification {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #cd4075;
+  color: #fff;
+  padding: 20px 30px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 2000;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.lang-notification.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+
 
 /* ===== DARK MODE ===== */
 body.dark-mode {
