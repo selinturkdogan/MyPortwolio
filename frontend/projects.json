@@ -1,5 +1,12 @@
 [
   {
+  "name": "ShopHub - E-Commerce Microservices Platform",
+  "description": "ShopHub is a full-stack e-commerce platform built with a modern microservices architecture. The application includes a React + TypeScript frontend and multiple backend services (User, Product, and Order) connected through an API Gateway. It supports real-time product browsing, search functionality powered by Elasticsearch, secure JWT-based authentication, shopping cart operations, and order processing with event-driven communication using RabbitMQ. Each service maintains its own database, ensuring loose coupling, scalability, and independent deployment. The project demonstrates containerized deployment using Docker Compose and follows modern software architecture best practices.",
+  "technologies": ["React.js","TypeScript","Node.js","Express.js","Python (Flask)","Java (Spring Boot)","MongoDB","PostgreSQL","MySQL","RabbitMQ","Elasticsearch","Docker","REST API"],
+  "github": "https://github.com/selinturkdogan/E-commerce-app-microservices",
+  "image": "e-commerce.png"
+  },
+  {
   "name": "Real Time Chat Application",
   "description": "The Real-Time Chat Application is a web-based messaging system built using Node.js, Express, and Socket.io. The project enables instant private messaging and dynamic group communication between connected users through WebSocket technology. It includes features such as live user tracking, group creation, admin-controlled member management, avatar customization, and real-time message broadcasting. The system operates without a database, storing data in memory during runtime. The architecture follows modular design principles and demonstrates advanced real-time communication patterns in full-stack JavaScript development.",
   "technologies": ["Node.js", "Express.js", "Socket.io", "JavaScript", "HTML", "CSS"],
