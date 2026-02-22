@@ -7,6 +7,13 @@
   "image": "e-commerce.png"
   },
   {
+  "name": "Customer Churn Prediction Using Machine Learning",
+  "description": "This project focuses on predicting customer churn in a telecommunications company using machine learning and neural network models. The dataset was preprocessed through feature engineering, encoding, scaling, and dimensionality reduction with Principal Component Analysis (PCA), reducing 30 features to 13 principal components while preserving 90% of the variance. Multiple models including Logistic Regression, Random Forest, and a Multi-Layer Perceptron (MLP) were trained and evaluated using Accuracy, Precision, Recall, and F1-score, with particular emphasis on recall due to its business impact. Logistic Regression achieved the best balance between performance and interpretability, making it the most suitable model for identifying potential churn customers and supporting data-driven retention strategies.",
+  "technologies": ["Python", "Pandas", "NumPy", "Scikit-learn", "Matplotlib", "Seaborn", "Machine Learning", "PCA", "Neural Networks"],
+  "github": "https://github.com/selinturkdogan/Churn-Project",
+  "image": "churn project.png"
+  },
+  {
   "name": "Real Time Chat Application",
   "description": "The Real-Time Chat Application is a web-based messaging system built using Node.js, Express, and Socket.io. The project enables instant private messaging and dynamic group communication between connected users through WebSocket technology. It includes features such as live user tracking, group creation, admin-controlled member management, avatar customization, and real-time message broadcasting. The system operates without a database, storing data in memory during runtime. The architecture follows modular design principles and demonstrates advanced real-time communication patterns in full-stack JavaScript development.",
   "technologies": ["Node.js", "Express.js", "Socket.io", "JavaScript", "HTML", "CSS"],
