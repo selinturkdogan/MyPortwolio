@@ -266,7 +266,7 @@ fetch('projects.json')
         <img src="${proj.image}" alt="${proj.name} Görseli">
         <h3>${proj.name}</h3>
         <p>${proj.description}</p>
-        <p><strong>Teknolojiler:</strong> ${proj.technologies.join(', ')}</p>
+        <p><strong>Technologies:</strong> ${proj.technologies.join(', ')}</p>
         <a href="${proj.github}" target="_blank">GitHub</a>
       `;
 

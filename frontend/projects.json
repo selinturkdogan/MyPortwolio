@@ -1,5 +1,19 @@
 [
   {
+  "name": "Real Time Chat Application",
+  "description": "The Real-Time Chat Application is a web-based messaging system built using Node.js, Express, and Socket.io. The project enables instant private messaging and dynamic group communication between connected users through WebSocket technology. It includes features such as live user tracking, group creation, admin-controlled member management, avatar customization, and real-time message broadcasting. The system operates without a database, storing data in memory during runtime. The architecture follows modular design principles and demonstrates advanced real-time communication patterns in full-stack JavaScript development.",
+  "technologies": ["Node.js", "Express.js", "Socket.io", "JavaScript", "HTML", "CSS"],
+  "github": "https://github.com/selinturkdogan/realtimeChatApp",
+    "image": "chatapp.png"
+  },
+  {
+  "name": "Movie Search Application",
+  "description": "The Movie Search Application is a responsive web application built with React and Tailwind CSS that allows users to search for movies and view detailed information in real time. The project integrates an external movie API to dynamically fetch and display movie data, including posters, ratings, release dates, and plot summaries. It also features a favorites system where users can save and manage selected movies. The application follows a component-based architecture and modern frontend development best practices, focusing on clean UI design, dynamic state management, and API integration.",
+  "technologies": ["React.js", "JavaScript", "Tailwind CSS", "Node.js", "REST API"],
+  "github": "https://github.com/selinturkdogan/movie-search-app",
+  "image": "moviesearch.png"
+  },
+  {
     "name": "Retro Sytle Snake Game",
     "description": "The Retro Snake Game project aims to recreate the nostalgic experience of the classic snake game using Unity and C#. The project’s objective is to deliver a functional, interactive, and visually clean game in which the player controls a snake to collect food and avoid collisions. The system features a score tracking mechanism, game over screen, restart and exit options, and a difficulty selection menu that dynamically adjusts the snake’s speed. The design follows modular principles and adheres to software engineering best practices. The game was built as a stand-alone single-player system with scope for future enhancements such as multiplayer mode and additional game mechanics.",
     "technologies": ["C#", "Unity"],
